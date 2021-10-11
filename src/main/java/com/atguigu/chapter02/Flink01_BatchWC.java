@@ -30,7 +30,7 @@ public class Flink01_BatchWC {
             public void flatMap(String value, Collector<Tuple2<String, Long>> out) throws Exception {
                 String[] words = value.split(" ");
                 for (String word : words) {
-                    out.collect(Tuple2.of(word, 2L));
+                    out.collect(Tuple2.of(word, 10L));
                 }
             }
         });
